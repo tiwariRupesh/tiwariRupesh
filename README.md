@@ -12,8 +12,7 @@ Spring Cloud Config Server is used to provide server-side and client-side suppor
  
  The answer is Spring Cloud config server.
  
- ****Spring Cloud Config Server Architecture
-
+**Spring Cloud Config Server Architecture**
 <!--
 **tiwariRupesh/tiwariRupesh** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
