@@ -1,4 +1,4 @@
-#**Spring Cloud Config Server.
+**Spring Cloud Config Server.
 
 Spring Cloud Config Server is used to provide server-side and client-side support for externalized configuration in a distribute system.
         
