@@ -5,6 +5,8 @@ Spring Cloud Config Server is used to provide server-side and client-side suppor
  So when you have multiple microservices, and you want to easily control the configuration for all of them at one go - you’ll mostly be looking at Spring Cloud Config Server. 
  
  **Why spring cloud config server is needed ?**
+ 
+ But the main problem is that Configuration properties are tied to the codebase or statically packaged, so any changes in the properties file means rebuilding and redeploying the application. 
 
 <!--
 **tiwariRupesh/tiwariRupesh** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
