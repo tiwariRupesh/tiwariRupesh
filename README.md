@@ -7,6 +7,8 @@ Spring Cloud Config Server is used to provide server-side and client-side suppor
  **Why spring cloud config server is needed ?**
  
  But the main problem is that Configuration properties are tied to the codebase or statically packaged, so any changes in the properties file means rebuilding and redeploying the application. 
+ 
+ So, somehow, we need a technology that maintains all properties, and if any properties are changed, it will pick up the changes and reflect them without an application rebuild or restart.
 
 <!--
 **tiwariRupesh/tiwariRupesh** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
