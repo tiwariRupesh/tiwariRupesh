@@ -10,7 +10,7 @@ Spring Cloud Config Server is used to provide server-side and client-side suppor
  
  So, somehow, we need a technology that maintains all properties, and if any properties are changed, it will pick up the changes and reflect them without an application rebuild or restart.
  
- The answer is Spring Cloud config server.
+ The answer is Spring Cloud config server .
  
 **Spring Cloud Config Server Architecture**
 <!--
