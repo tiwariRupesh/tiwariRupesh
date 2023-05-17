@@ -3,6 +3,8 @@
 Spring Cloud Config Server is used to provide server-side and client-side support for externalized configuration in a distribute system.
         
  So when you have multiple microservices, and you want to easily control the configuration for all of them at one go - you’ll mostly be looking at Spring Cloud Config Server. 
+ 
+ **Why spring cloud config server is needed ?**
 
 <!--
 **tiwariRupesh/tiwariRupesh** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
