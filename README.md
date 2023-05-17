@@ -1,4 +1,4 @@
-##spring cloud config server##
+#spring cloud config server
 
 <!--
 **tiwariRupesh/tiwariRupesh** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
