@@ -12,7 +12,7 @@ renewal batch -- it has batch relates entries , it stores these entries
 ifsc file , eqifax file , nmac file name ,ifsc_batch status, Equifax
 batch status , processor id , smec batch status etc .
 
--- it captures household id,household income , batch id , ifsc file name
+renewal_households -- it captures household id,household income , batch id , ifsc file name
 , Equifax file name , irs income , Equifax income etc at household.
 
 renewal_households_applicants -it stores applicants related data
