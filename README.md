@@ -1,29 +1,51 @@
-**Spring Cloud Config Server.**
+**RRV BATCH JOB FLOW**
 
-Spring Cloud Config Server is used to provide server-side and client-side support for externalized configuration in a distribute system.
-        
- So when you have multiple microservices, and you want to easily control the configuration for all of them at one go - you’ll mostly be looking at Spring Cloud Config Server. 
- 
- **Why spring cloud config server is needed ?**
- 
- But the main problem is that Configuration properties are tied to the codebase or statically packaged, so any changes in the properties file means rebuilding and redeploying the application. 
- 
- So, somehow, we need a technology that maintains all properties, and if any properties are changed, it will pick up the changes and reflect them without an application rebuild or restart.
- 
- The answer is Spring Cloud config server .
- 
-**Spring Cloud Config Server Architecture**
-<!--
-**tiwariRupesh/tiwariRupesh** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+**MS-DVS Module -\>**
 
-Here are some ideas to get you started:
+RRV Controller (com.getinsured.iex.hub.rest.controller) -- RRV
+controller is a class , it is couple of end points ,where in we can
+initiate batch job ,and check batch job processing status persists data
+into below mentioned tables.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+DVS_BATCH -- It stores batch id , batch name , batch creation date .
+
+renewal batch -- it has batch relates entries , it stores these entries
+ifsc file , eqifax file , nmac file name ,ifsc_batch status, Equifax
+batch status , processor id , smec batch status etc .
+
+-- it captures household id,household income , batch id , ifsc file name
+, Equifax file name , irs income , Equifax income etc at household.
+
+renewal_households_applicants -it stores applicants related data
+(applicants first name , applicant last name )
+
+RRVProcessor -- it is a class which has 3 schedular jobs
+
+1 databaseToXML() -- it is a cron job which runs every 2 mintues and
+takes data from database , invokes dds-RRV internally , and converts it
+into xml data.
+
+2 . xmlToZipFiles() -- it is a cron job which runs every 3 minutes and
+internally dds-RRV service , and converts xml into zip file .
+
+**DVS-RRV Module**
+
+It has aggregator class , based on TDS type , it invokes respective
+*irsAggregator , ssaAggregator , equifaxAggregator, medicareAggregator,
+dmfAggregator.*
+
+*Inside* respective *Aggregator, configurations are configured
+(*FILE_NAME_PREFIX,
+
+FOLDER_NAME ,templateName ,responseTemplateName ,templatePrefix
+,templateSuffix ,responseXMLArrayKey ,tdsType)
+
+It has couple of implementation classes .
+
+XMLProcessor -- takes data from database , processes , converts it into
+xml data.
+
+RRVUnzipImpl -- takes zip file and converts it into zip file
+
+RRVZipImpl -- it takes xml data, converts it into zip file
+
