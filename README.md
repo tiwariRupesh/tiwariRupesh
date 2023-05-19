@@ -1,11 +1,10 @@
-               **RRV BATCH JOB FLOW**
+**RRV BATCH JOB FLOW**
 
 **MS-DVS Module -\>**
 
-RRV Controller (com.getinsured.iex.hub.rest.controller) -- RRV
-controller is a class , it is couple of end points ,where in we can
-initiate batch job ,and check batch job processing status persists data
-into below mentioned tables.
+RRV Controller - It has couple of end points ,where in we can initiate
+batch job ,and check batch job processing status persists data into
+below mentioned tables.
 
 DVS_BATCH -- It stores batch id , batch name , batch creation date .
 
@@ -19,13 +18,13 @@ batch status , processor id , smec batch status etc .
 renewal_households_applicants -it stores applicants related data
 (applicants first name , applicant last name )
 
-RRVProcessor -- it is a class which has 3 schedular jobs
+**RRVProcessor** -- it is a class which has 3 schedular jobs
 
-1 databaseToXML() -- it is a cron job which runs every 2 mintues and
+**1 databaseToXML()** -- it is a cron job which runs every 2 mintues and
 takes data from database , invokes dds-RRV internally , and converts it
 into xml data.
 
-2 . xmlToZipFiles() -- it is a cron job which runs every 3 minutes and
+**2 xmlToZipFiles()** -- it is a cron job which runs every 3 minutes and
 internally dds-RRV service , and converts xml into zip file .
 
 **DVS-RRV Module**
@@ -42,10 +41,9 @@ FOLDER_NAME ,templateName ,responseTemplateName ,templatePrefix
 
 It has couple of implementation classes .
 
-XMLProcessor -- takes data from database , processes , converts it into
-xml data.
+**XMLProcessor** -- takes data from database , processes , converts it
+into xml data.
 
-RRVUnzipImpl -- takes zip file and converts it into zip file
+**RRVUnzipImpl** -- takes zip file and converts it into zip file
 
-RRVZipImpl -- it takes xml data, converts it into zip file
-
+**RRVZipImpl** -- it takes xml data, converts it into zip file
