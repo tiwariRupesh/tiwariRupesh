@@ -3,8 +3,7 @@
 **MS-DVS Module -\>**
 
 RRV Controller - It has couple of end points ,where in we can initiate
-batch job ,and check batch job processing status persists data into
-below mentioned tables.
+batch job ,persists data into below mentioned tables and check batch job processing status 
 
 DVS_BATCH -- It stores batch id , batch name , batch creation date .
 
