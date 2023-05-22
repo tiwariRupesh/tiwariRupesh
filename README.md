@@ -18,27 +18,20 @@ renewal\_households\_applicants  -It stores applicants related data  (applicants
 
 **RRVProcessor(**com.getinsured.iex.hub.rrv.scheduler) – It is a class in ms-dvs module  which has 3 schedular jobs .It internally accesses dds-rrv module and to enable it , we have to add below dependency in ms-dvs module .
 
+
+
+
+
+
 <dependency>
 
 `            `<groupId>com.getinsured.dvs</groupId>
 
-`            `<artifactId>dvs-rrv</artifactId>
-
-`            `<exclusions>
-
-`                `<exclusion>
-
-`                    `<groupId>\*</groupId>
-
-`                    `<artifactId>\*</artifactId>
-
-`                `</exclusion>
-
-`            `</exclusions>
+`            `<artifactId>dvs-rrv</artifactId>  
 
 `            `<scope>provided</scope>
 
-`        `</dependency>
+` `</dependency>
 
 **1 databaseToXML()** – It is a cron job which runs every 2 mintues and takes data from database , invokes respective aggregrator based on tds type (dds-RRV module) internally  , and converts it into xml data.
 
