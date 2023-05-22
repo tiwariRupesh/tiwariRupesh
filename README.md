@@ -59,10 +59,8 @@ It has aggregator class , based on TDS type , it invokes respective
 *irsAggregator , ssaAggregator , equifaxAggregator, medicareAggregator,
 dmfAggregator.*
 
-*Inside* respective *Aggregator, configurations are configured
-(*FILE_NAME_PREFIX,
-
-FOLDER_NAME ,templateName ,responseTemplateName ,templatePrefix
+*Inside* respective Aggregator, configurations are configured
+(FILE_NAME_PREFIX,FOLDER_NAME ,templateName ,responseTemplateName ,templatePrefix
 ,templateSuffix ,responseXMLArrayKey ,tdsType)
 
 It has couple of implementation classes.
