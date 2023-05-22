@@ -19,10 +19,6 @@ renewal\_households\_applicants  -It stores applicants related data  (applicants
 **RRVProcessor(**com.getinsured.iex.hub.rrv.scheduler) – It is a class in ms-dvs module  which has 3 schedular jobs .It internally accesses dds-rrv module and to enable it , we have to add below dependency in ms-dvs module .
 
 
-
-
-
-
 <dependency>
 
 `            `<groupId>com.getinsured.dvs</groupId>
